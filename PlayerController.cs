@@ -18,7 +18,6 @@ public class PlayerController : StateMachine {
         State jump = new JumpState(animator, playerMoveable, "jump");
         State attack = new AttackState(animator, "attack");
 
-
         //Transitions
         addTransition(idle, walk, ()=> playerMoveable.CanMove());
         addTransition(idle, jump, ()=> false);
